@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "16388d68-7006-4148-aa23-a47cecd1556b",
+		"name": "movie-nodejs-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "movie-api",
+			"item": [
+				{
+					"name": "get list movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/movie",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nameMovie\": \"The Croods: New Age\",\n    \"trailer\": \"https://www.youtube.com/embed/Fp9pNPdNwjI\",\n    \"description\": \"Sinh tồn trong một thế giới tiền sử luôn rình rập hiểm nguy từ đủ loài quái thú hung dữ cho tới thảm họa ngày tận thế, Nhà Croods chưa từng một lần chùn bước.\",\n    \"score\": 10}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/movie",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/movie/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/movie/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nameMovie\": \"The Last Emperor\",\n    \"trailer\": \"https://www.youtube.com/embed/Fp9pNPdNwjI\",\n    \"description\": \"Sinh tồn trong một thế giới tiền sử luôn rình rập hiểm nguy từ đủ loài quái thú hung dữ cho tới thảm họa ngày tận thế, Nhà Croods chưa từng một lần chùn bước.\",\n    \"score\": 10}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/movie/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload image movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJucWgxMUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzEyMTI0NDUsImV4cCI6MTY2MjMxNjQ0NX0.cjC3IlEQhlpKEWgglOiCVGKxz_jRH6ZdGV4AbTR-qBU",
+								"type": "text"
+							},
+							{
+								"key": "avatar",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/admin/Desktop/passengers.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/movie/upload-image/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"movie",
+								"upload-image",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-api",
+			"item": [
+				{
+					"name": "get list user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Nguyễn Quốc Huy 95\",\n    \"email\" : \"nqh@gmail.com\",\n    \"password\" : \"12345\",\n    \"phone\" : \"0909876780\",\n    \"role\" : \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Nguyễn Quốc Huy\",\n    \"email\" : \"nqh@gmail.com\",\n    \"password\" : \"12345678\",\n    \"phone\" : \"0909876780\",\n    \"role\" : \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJraGFuZ0BnbWFpbC5jb20iLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjMxMjA0MjY2LCJleHAiOjE2NjIzMDgyNjZ9.EuHVcUttNHSRQdfY_-lBQObpWngD6G-y60dkIC7Flq0",
+								"type": "text"
+							},
+							{
+								"key": "avatar",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/admin/Desktop/Screen Shot 2021-09-07 at 15.37.19.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/upload-avatar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"upload-avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cinema-api",
+			"item": [
+				{
+					"name": "create cinema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n          \"name\": \"BHD Nguyễn Gia Trí\",\n          \"address\": \"202 đường Nguyễn Gia Trí quận Bình Thạnh\",\n          \"cineplexId\": 1\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cinema",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove cinema",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cinema",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n          \"name\": \"BHD Nguyễn Gia Trí\",\n          \"address\": \"202 đường Nguyễn Gia Trí quận Bình Thạnh\",\n          \"cineplexId\": 1\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cinema/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cinemas by cineplex",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/by-cineplex?nameCineplex=BHDStar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"by-cineplex"
+							],
+							"query": [
+								{
+									"key": "nameCineplex",
+									"value": "BHDStar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload image cinema",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJucWgxMUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzEyMTI0NDUsImV4cCI6MTY2MjMxNjQ0NX0.cjC3IlEQhlpKEWgglOiCVGKxz_jRH6ZdGV4AbTR-qBU",
+								"type": "text"
+							},
+							{
+								"key": "avatar",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/admin/Desktop/bhd-star-3-2.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cinema/upload-image/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"upload-image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cineplex-api",
+			"item": [
+				{
+					"name": "get list cineplex",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cineplex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create cineplex",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n          \"name\": \"MegaS\"\n        \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cineplex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cineplex/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove cinema",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cineplex/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cinema",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n          \"name\": \"BHDStar\"\n         \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cineplex/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload logo cineplex",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJucWgxMUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MzEyMTI0NDUsImV4cCI6MTY2MjMxNjQ0NX0.cjC3IlEQhlpKEWgglOiCVGKxz_jRH6ZdGV4AbTR-qBU",
+								"type": "text"
+							},
+							{
+								"key": "avatar",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/admin/Desktop/bhd.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cineplex/upload-logo/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cineplex",
+								"upload-logo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "showtime-api",
+			"item": [
+				{
+					"name": "get list showtime cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/showtime",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"showtime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create showtime",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n     \"showDate\":\"2021-10-21\", \"showTimeArray\":{\"time1\":\"10:00\",\"time2\":\"14:00\"}, \"cinemaId\":3, \"movieId\":3\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/showtime",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"showtime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get detail cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove cinema",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cinema",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{      \n          \"name\": \"BHD Nguyễn Gia Trí\",\n          \"address\": \"202 đường Nguyễn Gia Trí quận Bình Thạnh\",\n          \"cineplexId\": 1\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cinema/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get showtime by movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cinema/by-cineplex?namCineplex=BHDStar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cinema",
+								"by-cineplex"
+							],
+							"query": [
+								{
+									"key": "namCineplex",
+									"value": "BHDStar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get showtime with movie by cinema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/showtime/by-cinema?cinemaId=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"showtime",
+								"by-cinema"
+							],
+							"query": [
+								{
+									"key": "cinemaId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"email\" : \"nqh11@gmail.com\",\r\n    \"password\" : \"12345\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/sign-in",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
